@@ -1,0 +1,23 @@
+{
+  "name": "diqueue",
+  "version": "1.0.0",
+  "description": "A simple performant priority queue which can pop AND shift.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "priority",
+    "queue",
+    "pop",
+    "shift",
+    "queue",
+    "priority",
+    "both",
+    "ends",
+    "binary",
+    "heap"
+  ],
+  "author": "Muaz Siddiqui",
+  "license": "ISC"
+}
