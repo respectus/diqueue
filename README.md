@@ -59,5 +59,6 @@ qObj.shift() // returns object { name: 'A', lag: 54 }
 
 MIT © 2017, Muaz Siddiqui
 
-Inspired by js-priority-queue by Adam Hooper and tinyqueue by Vladimir Agafonkin.
+Inspired by [js-priority-queue](https://github.com/adamhooper/js-priority-queue)
+by [Adam Hooper](https://github.com/adamhooper) and [tinyqueue](https://github.com/mourner/tinyqueue) by [Vladimir Agafonkin](https://github.com/mourner).
 
