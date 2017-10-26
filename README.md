@@ -124,5 +124,7 @@ MIT © 2017, Muaz Siddiqui
 
 *Inspired by:*
 [js-priority-queue](https://github.com/adamhooper/js-priority-queue) by [Adam Hooper](https://github.com/adamhooper)
+
 [tinyqueue](https://github.com/mourner/tinyqueue) by [Vladimir Agafonkin](https://github.com/mourner)
+
 [updatable-priority-queue](https://github.com/bbecquet/updatable-priority-queue) by [Benjamin Becquet](https://github.com/bbecquet)
