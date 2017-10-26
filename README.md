@@ -73,15 +73,15 @@ qObj.pop(); // returns object { name: 'C', lag: 37 }
 
 #### data
 _**Optional**_
-Type: `Array`
-Default: `[]`
+* Type: `Array`
+* Default: `[]`
 
 The array of items to insert into the priority queue.
 
 #### compareFn
 _**Optional**_
-Type: `Function`
-Default: `(a, b) => {
+* Type: `Function`
+* Default: `(a, b) => {
     return a > b ? a : b;
 }`
 
@@ -89,8 +89,8 @@ A comparator function to order the elements in the queue.
 
 #### identityKey
 _**Optional**_
-Type: `String`
-Default: `id`
+* Type: `String`
+* Default: `id`
 
 For an updatable queue, the key which is used to identify the object to update.
 
@@ -99,7 +99,7 @@ For an updatable queue, the key which is used to identify the object to update.
 
 #### data
 _**Required**_
-Type: `Object`
+* Type: `Object`
 
 The item to insert into the priority queue.
 
@@ -108,13 +108,13 @@ The item to insert into the priority queue.
 
 #### idValue
 _**Required**_
-Type: `Any`
+* Type: `Any`
 
 The value used to match the object, which will be updated.
 
 #### updatedItem
 _**Required**_
-Type: `Object`
+* Type: `Object`
 
 The new item which will replace the previous item that matched the given idValue.
 
@@ -123,6 +123,7 @@ The new item which will replace the previous item that matched the given idValue
 MIT © 2017, Muaz Siddiqui
 
 *Inspired by:*
+
 [js-priority-queue](https://github.com/adamhooper/js-priority-queue) by [Adam Hooper](https://github.com/adamhooper)
 
 [tinyqueue](https://github.com/mourner/tinyqueue) by [Vladimir Agafonkin](https://github.com/mourner)
