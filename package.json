@@ -1,6 +1,6 @@
 {
   "name": "diqueue",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A performant updatable priority queue which can pop AND shift.",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,10 @@
     "both",
     "ends",
     "binary",
-    "heap"
+    "heap",
+    "updatable",
+    "remove",
+    "update"
   ],
   "author": "Muaz Siddiqui",
   "license": "MIT"

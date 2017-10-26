@@ -59,11 +59,12 @@ qObj.pop() // returns object { name: 'B', lag: 22 }
 qObj.shift() // returns object { name: 'A', lag: 54 }
 
 // Initialized an updatable priority queue with a custom key
-var qObj2 = new DiQueue([{ name: 'A', lag: 54 }, { name: 'B', lag: 22 }, { name: 'C', lag: 37 }], (a, b) => {
+var qObj2 = new DiQueue([{ name: 'A', lag: 54 }, { name: 'B', lag: 22 }, { name: 'C', lag: 37 },{ name: 'D', lag: 15 }], (a, b) => {
   return a.lag > b.lag ? a : b;
 }, 'name');
 
 qObj2.update('A', { name: 'A', lag: 12 });
+qObj2.remove('D');
 
 qObj2.pop(); // returns object { name: 'A', lag: 12 }
 qObj2.pop(); // returns object { name: 'B', lag: 22 }
@@ -106,6 +107,15 @@ For an updatable queue, the key which is used to identify the object to update.
 * Type: `Object`
 
 The item to insert into the priority queue.
+
+### remove(idValue)
+---
+
+#### idValue
+* _**Required**_
+* Type: `Any`
+
+The value used to match the object, which will be removed.
 
 ### update(idValue, updatedItem)
 ---

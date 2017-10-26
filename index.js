@@ -92,6 +92,13 @@ class DiQueue {
         this.length++;
     }
 
+    remove(idValue) {
+        var index = this._findElementIndex(idValue);
+        if (index === -1) return;
+        this.data.splice(index, 1);
+        this.length--;
+    }
+
     shift() {
         if (!this.length) return null;
 
