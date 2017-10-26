@@ -72,14 +72,14 @@ qObj.pop(); // returns object { name: 'C', lag: 37 }
 ---
 
 #### data
-_**Optional**_
+* _**Optional**_
 * Type: `Array`
 * Default: `[]`
 
 The array of items to insert into the priority queue.
 
 #### compareFn
-_**Optional**_
+* _**Optional**_
 * Type: `Function`
 * Default: `(a, b) => {
     return a > b ? a : b;
@@ -88,7 +88,7 @@ _**Optional**_
 A comparator function to order the elements in the queue.
 
 #### identityKey
-_**Optional**_
+* _**Optional**_
 * Type: `String`
 * Default: `id`
 
@@ -98,7 +98,7 @@ For an updatable queue, the key which is used to identify the object to update.
 ---
 
 #### data
-_**Required**_
+* _**Required**_
 * Type: `Object`
 
 The item to insert into the priority queue.
@@ -107,13 +107,13 @@ The item to insert into the priority queue.
 ---
 
 #### idValue
-_**Required**_
+* _**Required**_
 * Type: `Any`
 
 The value used to match the object, which will be updated.
 
 #### updatedItem
-_**Required**_
+* _**Required**_
 * Type: `Object`
 
 The new item which will replace the previous item that matched the given idValue.
