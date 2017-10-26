@@ -1,6 +1,6 @@
 {
   "name": "diqueue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple performant priority queue which can pop AND shift.",
   "main": "index.js",
   "scripts": {
