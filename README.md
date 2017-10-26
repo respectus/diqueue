@@ -17,6 +17,8 @@ $ npm install --save diqueue
 
 ## Usage
 ```javascript
+var DiQueue = require('diqueue');
+
 // An empty priority queue
 var q = new DiQueue();
 
@@ -48,6 +50,7 @@ var qComp = new DiQueue([88, 12, 23, 45, 56], (a, b) => {
 qComp.pop(); // returns 88
 qComp.shift(); // returns 12
 
+// Initialized with custom objects
 var qObj = new DiQueue([{ name: 'A', lag: 54 }, { name: 'B', lag: 22 }, { name: 'C', lag: 37 }], (a, b) => {
   return a.lag > b.lag ? a : b;
 });
@@ -55,6 +58,7 @@ var qObj = new DiQueue([{ name: 'A', lag: 54 }, { name: 'B', lag: 22 }, { name: 
 qObj.pop() // returns object { name: 'B', lag: 22 }
 qObj.shift() // returns object { name: 'A', lag: 54 }
 
+// Initialized an updatable priority queue with a custom key
 var qObj2 = new DiQueue([{ name: 'A', lag: 54 }, { name: 'B', lag: 22 }, { name: 'C', lag: 37 }], (a, b) => {
   return a.lag > b.lag ? a : b;
 }, 'name');
