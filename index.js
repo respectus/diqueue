@@ -2,14 +2,17 @@ const DEFAULT_COMPARE = (a, b) => {
     return a > b ? a : b;
 };
 
+const DEFAULT_ID_KEY = 'id';
+
 /*
  *  A minimal implmentation of a priority q inspired by js-priority-queue by Adam Hooper.
  */
 class DiQueue {
-    constructor(data, compareFn) {
+    constructor(data, compareFn, identityKey) {
         this.data = data || [];
         this.length = this.data.length;
         this.compareFn = compareFn || DEFAULT_COMPARE;
+        this.identityKey = identityKey || DEFAULT_ID_KEY;
 
         if (this.length > 0) {
             for (var i = (this.length >> 1) - 1; i >= 0; i--) {
@@ -38,6 +41,16 @@ class DiQueue {
         }
 
         this.data[index] = item;
+    }
+
+    _findElementIndex(value) {
+        var l = this.data.length;
+        for (var i = 0; i < l; i++) {
+            if (this.data[i][this.identityKey] === value) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     _up(index) {
@@ -88,6 +101,18 @@ class DiQueue {
         if (this.length > 0) this.data.splice(this.data.indexOf(last), 1);
 
         return last;
+    }
+
+    update(idValue, updatedItem) {
+        var index = this._findElementIndex(idValue);
+        if (index === -1) { this.push(updatedItem); return; }
+        var prevItem = this.data[index];
+        this.data[index] = updatedItem;
+        if (this.compareFn(prevItem, updatedItem) === updatedItem) {
+            this._up(index);
+        } else {
+            this._down(index);
+        }
     }
 }
 
