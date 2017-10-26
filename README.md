@@ -57,13 +57,13 @@ qObj.shift() // returns object { name: 'A', lag: 54 }
 
 var qObj2 = new DiQueue([{ name: 'A', lag: 54 }, { name: 'B', lag: 22 }, { name: 'C', lag: 37 }], (a, b) => {
   return a.lag > b.lag ? a : b;
-});
+}, 'name');
 
-qObj.update('A', { name: 'A', lag: 12 });
+qObj2.update('A', { name: 'A', lag: 12 });
 
-qObj.pop(); // returns object { name: 'A', lag: 12 }
-qObj.pop(); // returns object { name: 'B', lag: 22 }
-qObj.pop(); // returns object { name: 'C', lag: 37 }
+qObj2.pop(); // returns object { name: 'A', lag: 12 }
+qObj2.pop(); // returns object { name: 'B', lag: 22 }
+qObj2.pop(); // returns object { name: 'C', lag: 37 }
 ```
 
 ## API
